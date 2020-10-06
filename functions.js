@@ -60,9 +60,9 @@ concatenate(["a", "b", "c"]);
 /* Opdracht 5 */
 // Schrijf een functie die een array van strings verwacht en een gezamelijke groet teruggeeft
 // ---- Verwachte uitkomsten:
-// ["Nick, Nova, Mitchel, Arjen"] geeft "Hoi Nick, Nova, Mitchel en Arjen!"
+// ["Nick", "Nova", "Mitchel", "Arjen"] geeft "Hoi Nick, Nova, Mitchel en Arjen!"
 // ["Piet", "Henk"] geeft "Hoi Piet en Henk!"
-// ["A", "B", "C", "D", "E", "F"] geeft "Hoi A, B, C, D, E, en F!"
+// ["A", "B", "C", "D", "E", "F"] geeft "Hoi A, B, C, D, E en F!"
 
 function greeting(stringsArray) {
     let greeting = "Hoi ";
