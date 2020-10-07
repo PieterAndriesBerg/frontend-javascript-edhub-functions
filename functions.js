@@ -70,14 +70,14 @@ function greeting(stringsArray) {
     for (let i = 0; i < stringsArray.length; i++) {
         // als dit de laatste entry is, voeg dan het uitroepteken toe
         if (i === stringsArray.length - 1) {
-            return greeting = greeting + "en " + stringsArray[i] + "!";
+            // de return zorgt ervoor dat er niet meer naar de andere if-statements gekeken wordt
+            return greeting = greeting + " en " + stringsArray[i] + "!";
         }
-        // als de array maar twee namen bevat, voeg dan geen komma toe
-        if (stringsArray.length === 2) {
-            greeting = greeting + stringsArray[i] + " ";
-        }
-        // als de array meer dan twee namen bevat, voeg dan wel een komma toe
-        if (stringsArray.length > 2) {
+        // als de array maar twee namen bevat of we zijn bij de één-na-laatste naam, voeg dan alleen de naam toe
+        if (stringsArray.length === 2 || i === stringsArray.length - 2) {
+            greeting = greeting + stringsArray[i];
+        } else {
+            // in andere alle gevallen voegen we een komma en spatie toe
             greeting = greeting + stringsArray[i] + ", ";
         }
     }
@@ -86,3 +86,4 @@ function greeting(stringsArray) {
 }
 
 greeting(["Piet", "Henk"]);
+greeting(["A", "B", "C", "D", "E", "F"]);
